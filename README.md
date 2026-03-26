@@ -1,7 +1,7 @@
 # Graph Business Intelligence System
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-green)](https://graph-business-system.vercel.app)
-[![Backend API](https://img.shields.io/badge/Backend-API-blue)](https://graph-backend.onrender.com/docs)
+[![Live Demo]([https://img.shields.io/badge/Live-Demo-green](http://graph-ai-frontend.s3-website.ap-south-1.amazonaws.com/))]([https://graph-business-system.vercel.app](http://graph-ai-frontend.s3-website.ap-south-1.amazonaws.com/))
+[![Backend API]([https://img.shields.io/badge/Backend-API-blue](http://3.110.160.19:8000/docs))]([https://graph-backend.onrender.com/docs](http://3.110.160.19:8000/docs))
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
 A powerful business intelligence system that transforms fragmented business data into an interactive graph, allowing natural language queries powered by LLM (Groq).

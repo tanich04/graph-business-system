@@ -1,0 +1,16 @@
+{
+  "buildCommand": "npm run vercel-build",
+  "outputDirectory": "dist",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://graph-backend.onrender.com/api/$1"
+    }
+  ],
+  "env": {
+    "VITE_API_URL": "https://graph-backend.onrender.com"
+  }
+}

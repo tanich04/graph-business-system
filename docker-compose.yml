@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  neo4j:
+    image: neo4j:latest
+    container_name: neo4j_graph
+    ports:
+      - "7474:7474"  # HTTP
+      - "7687:7687"  # Bolt
+    environment:
+      - NEO4J_AUTH=neo4j/password123
+      - NEO4J_PLUGINS=["apoc"]
+    volumes:
+      - neo4j_data:/data
+    networks:
+      - graph_network
+
+  redis:
+    image: redis:alpine
+    container_name: redis_cache
+    ports:
+      - "6379:6379"
+    networks:
+      - graph_network
+
+volumes:
+  neo4j_data:
+
+networks:
+  graph_network:
+    driver: bridge

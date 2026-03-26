@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.app-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.app-title img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+.app-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.stats-badge {
+  background: rgba(255,255,255,0.2);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 1.5rem;
+}
+
+.app-content {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.graph-section {
+  flex: 1;
+  position: relative;
+  background: #ffffff;
+}
+
+.graph-controls {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 5;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 8px;
+}
+
+.sidebar {
+  width: 900px;
+  background: white;
+  border-left: 1px solid #e0e0e0;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 5;
+}
+
+.sidebar.closed {
+  transform: translateX(900px);
+}
+
+.sidebar-toggle {
+  position: absolute;
+  left: -32px;
+  top: 20px;
+  width: 32px;
+  height: 32px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px 0 0 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  transition: all 0.2s;
+}
+
+.sidebar-toggle:hover {
+  background: #f5f5f5;
+}
+
+.sidebar-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.chat-container{
+  width: 100%;
+}
+
+.messages-container{
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+  }
+}

@@ -1,0 +1,263 @@
+.node-details-sidebar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-left: 1px solid #E5E7EB;
+  overflow-y: auto;
+}
+
+.node-details-header {
+  padding: 20px;
+  border-bottom: 1px solid #E5E7EB;
+  border-left: 4px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #F9FAFB;
+}
+
+.header-info {
+  flex: 1;
+}
+
+.node-type-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.node-details-header h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  word-break: break-all;
+  margin: 0;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #6B7280;
+  padding: 0 4px;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.close-button:hover {
+  color: #111827;
+}
+
+.node-details-content {
+  padding: 20px;
+  flex: 1;
+}
+
+.summary-info {
+  background: #F3F4F6;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-label {
+  font-size: 11px;
+  color: #6B7280;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.info-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 4px;
+}
+
+.expand-button, .action-button {
+  background: #3B82F6;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.expand-button:hover, .action-button:hover {
+  background: #2563EB;
+  transform: translateY(-1px);
+}
+
+.detail-section {
+  margin-bottom: 24px;
+}
+
+.detail-section h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #E5E7EB;
+}
+
+.properties-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.property-item {
+  display: flex;
+  font-size: 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.property-key {
+  width: 130px;
+  color: #6B7280;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.property-value {
+  flex: 1;
+  color: #111827;
+  word-break: break-word;
+}
+
+.relationships-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.relationship-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background: #F9FAFB;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.relationship-type {
+  font-weight: 600;
+  color: #3B82F6;
+  margin-bottom: 4px;
+}
+
+.relationship-target {
+  color: #6B7280;
+  font-size: 11px;
+  word-break: break-word;
+}
+
+.no-data {
+  color: #9CA3AF;
+  font-size: 12px;
+  font-style: italic;
+  padding: 10px 0;
+}
+
+.more-info {
+  color: #6B7280;
+  font-size: 11px;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.total-count-badge {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #6B7280;
+  background: #F3F4F6;
+  padding: 2px 8px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.sample-nodes {
+  background: #F9FAFB;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
+.sample-nodes h4 {
+  font-size: 12px;
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+.sample-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sample-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  padding: 4px 0;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.sample-id {
+  font-family: monospace;
+  color: #3B82F6;
+}
+
+.sample-amount {
+  color: #10B981;
+  font-weight: 500;
+}
+
+.loading-text {
+  color: #9CA3AF;
+  font-size: 12px;
+  font-style: italic;
+  padding: 10px 0;
+}
+
+.no-relationships {
+  text-align: center;
+  padding: 20px;
+  background: #F9FAFB;
+  border-radius: 8px;
+}
+
+.load-button {
+  margin-top: 10px;
+  background: #3B82F6;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.load-button:hover {
+  background: #2563EB;
+}

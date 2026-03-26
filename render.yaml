@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: graph-backend
+    runtime: python
+    repo: https://github.com/tanich04/graph-business-system
+    plan: free
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: NEO4J_URI
+        fromDatabase:
+          name: neo4j-db
+          property: connectionString
+      - key: NEO4J_USER
+        fromDatabase:
+          name: neo4j-db
+          property: user
+      - key: NEO4J_PASSWORD
+        fromDatabase:
+          name: neo4j-db
+          property: password
+      - key: REDIS_URL
+        fromService:
+          name: redis-cache
+          type: redis
+          property: connectionString
+      - key: GROQ_API_KEY
+        sync: false
+      - key: ENABLE_CACHE
+        value: true
+      - key: DEBUG
+        value: false
+
+  - type: redis
+    name: redis-cache
+    plan: free
+    maxmemory: 100

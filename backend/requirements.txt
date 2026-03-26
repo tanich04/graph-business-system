@@ -1,0 +1,12 @@
+neo4j
+python-dotenv
+pandas
+tqdm
+pydantic
+fastapi
+uvicorn
+python-multipart
+groq
+redis
+httpx
+numpy
